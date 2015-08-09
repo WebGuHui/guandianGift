@@ -1,0 +1,36 @@
+* {
+    box-sizing : border-box;
+}
+
+html, body {
+    margin     : 0;
+    padding    : 0;
+    width      : 100%;
+    min-height : 100%;
+    font-family: "Hiragino Sans GB","Microsoft YaHei","PingHei","Lucida Grande", "Lucida Sans Unicode", "Helvetica","Arial","Verdana","sans-serif";
+}
+
+.none {
+    display : none;
+}
+
+.slider {
+    width    : 100%;
+    overflow : hidden;
+}
+
+.slider .slider-wrapper {
+    height             : 100%;
+    -webkit-transition : -webkit-transform 1s;
+    -moz-transition    : -moz-transform 1s;
+    -ms-transition     : -ms-transform 1s;
+    -o-transition      : -o-transform 1s;
+    transition         : transform 1s;
+}
+
+.slider .slides {
+    height : 100%;
+
+}
+
+
