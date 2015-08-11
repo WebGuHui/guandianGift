@@ -1,13 +1,16 @@
+
+
 !function (window, document, undefined) {
   document.addEventListener('DOMContentLoaded', function () {
     var slider          = document.getElementById('slider'),
         sliderWrapper   = slider.children.item(0),
         screenHeight    = window.innerHeight,
+        current         = 0,
         slides          = document.querySelectorAll('#slider .slides'),
         slidesNumber    = slides.length,
-        current         = 0,
         limit           = slidesNumber - 1,
         isTransitionEnd = true;
+      
 
     slider.style.height = screenHeight + 'px';
     window.addEventListener('resize', function (event) {
@@ -31,6 +34,7 @@
     
     function setStylesTransform() {
       var styles = ['transform', '-webkit-transform', '-moz-transform', '-ms-transition'];
+      window.page = current;
       for (var i = 0; i < styles.length; i++)
         sliderWrapper.style[styles[i]] = 'translate3d(0px, -' + (current * screenHeight) + 'px, 0px)';
     }

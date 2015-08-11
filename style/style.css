@@ -9,7 +9,12 @@ html, body {
     min-height : 100%;
     font-family: "Hiragino Sans GB","Microsoft YaHei","PingHei","Lucida Grande", "Lucida Sans Unicode", "Helvetica","Arial","Verdana","sans-serif";
 }
-
+h1, h2, h3, h4, h5, h6, p {
+    margin:0px;
+    padding:0px;
+    font-weight:normal;
+    font-size:12px;
+}
 .none {
     display : none;
 }
