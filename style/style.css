@@ -1,0 +1,63 @@
+* {
+    box-sizing : border-box;
+}
+
+html, body {
+    margin     : 0;
+    padding    : 0;
+    width      : 100%;
+    min-height : 100%;
+    font-family: "Hiragino Sans GB","Microsoft YaHei","PingHei","Lucida Grande", "Lucida Sans Unicode", "Helvetica","Arial","Verdana","sans-serif";
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin:0px;
+    padding:0px;
+    font-weight:normal;
+    font-size:2em;
+}
+.none {
+    display : none;
+}
+
+.slider {
+    width    : 100%;
+    overflow : hidden;
+}
+
+.slider .slider-wrapper {
+    height             : 100%;
+    -webkit-transition : -webkit-transform 1s;
+    -moz-transition    : -moz-transform 1s;
+    -ms-transition     : -ms-transform 1s;
+    -o-transition      : -o-transform 1s;
+    transition         : transform 1s;
+}
+
+.slider .slides {
+    height : 100%;
+    text-align: center;
+    position: relative;
+}
+h3 {
+    position: absolute;
+    top: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+p {
+    position: absolute;
+    top: 5em;
+    width: 100%;
+    text-align: center;
+}
+
+.hide {
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+
+
+
+
+
