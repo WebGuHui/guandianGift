@@ -1,18 +1,12 @@
 var guhui = function() {
 	this.sele = document.getElementById('slider').getElementsByClassName('slides');
 	this.current = 0;
-	this.createMain();
+	// this.createMain();
 	this.sliderPage(window, window.document);
 
 };
 
-guhui.prototype.createMain = function() {
-	for(var i=0; i<this.sele.length; i++) {
-		var main = document.createElement('div');
-		main.className = 'main';
-		this.sele[i].appendChild(main);
-	}
-};
+
 
 guhui.prototype.getSlider = function(i) {
 	return this.sele[i];
@@ -131,13 +125,29 @@ guhui.prototype.sliderPage = function(window, document) {
 };
 
 guhui.prototype.callBack = function() {
+	var that = this;
 	for(var i=0; i<this.sele.length; i++) {
 		if((/\s*active\s*/).test(this.sele[i].className)) {
 			this.sele[i].className = this.sele[i].className.replace(/\s*active/,' ');
 		}
+		this.sele[i].className = 'slides';
+		if(this.sele[i].getElementsByTagName('h3').length !== 0) {
+			this.sele[i].getElementsByTagName('h3')[0].className = 'hide';
+		}
+		if(this.sele[i].getElementsByTagName('p').length !== 0) {
+			this.sele[i].getElementsByTagName('p')[0].className = 'hide';
+		}
 	}
 	this.sele[this.current].className += ' active';
-};//回调添加active，触发回调函数
+	setTimeout(function() {
+		if(that.sele[that.current].getElementsByTagName('h3').length !== 0) {
+			that.sele[that.current].getElementsByTagName('h3')[0].className = ' animated fadeInDown';
+		}
+		if(that.sele[that.current].getElementsByTagName('p').length !== 0) {
+			that.sele[that.current].getElementsByTagName('p')[0].className = ' animated zoomInDown';
+		}
+	},500);
+};//回调添加active，触发回调函数 h3 p 各一动画
 
 
 
@@ -145,4 +155,7 @@ guhui.prototype.callBack = function() {
 	var main = new guhui();
 	main.draw();
 	main.callBack();
+	var music = document.getElementById('myaudio');
+	music.src = '1.mp3';
+	music.play();
 }())

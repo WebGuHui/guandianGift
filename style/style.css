@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6, p {
     margin:0px;
     padding:0px;
     font-weight:normal;
-    font-size:12px;
+    font-size:2em;
 }
 .none {
     display : none;
@@ -35,7 +35,29 @@ h1, h2, h3, h4, h5, h6, p {
 
 .slider .slides {
     height : 100%;
-
+    text-align: center;
+    position: relative;
 }
+h3 {
+    position: absolute;
+    top: 2em;
+    width: 100%;
+    text-align: center;
+}
+
+p {
+    position: absolute;
+    top: 5em;
+    width: 100%;
+    text-align: center;
+}
+
+.hide {
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+
+
+
 
 
